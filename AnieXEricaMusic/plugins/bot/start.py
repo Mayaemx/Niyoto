@@ -46,7 +46,7 @@ async def start_pm(client, message: Message, _):
                 )
             return
         if name[0:3] == "inf":
-            m = await message.reply_text("🔎")
+            m = await message.reply_text("🧪")
             query = (str(name)).replace("info_", "", 1)
             query = f"https://www.youtube.com/watch?v={query}"
             results = VideosSearch(query, limit=1)
@@ -84,7 +84,7 @@ async def start_pm(client, message: Message, _):
                 )
     else:
         out = private_panel(_)
-        await message.reply_sticker("CAACAgQAAxkBAAEGNCdlmOVoVdzYjXDhFD-RBU4NEfAmGQACLwwAAuqTAVKXwqXcqn7CKDQE")
+        await message.reply_sticker("CAACAgUAAxkBAAEMazRmhP39-9svIaKlc8WB5Y5OjJYkywACNQ4AAsxr4FYxiZIm6CAKRTUE")
         await message.reply_photo(
             photo=config.START_IMG_URL,
             caption=_["start_2"].format(message.from_user.mention, app.mention),
@@ -102,7 +102,7 @@ async def start_pm(client, message: Message, _):
 async def start_gp(client, message: Message, _):
     out = start_panel(_)
     uptime = int(time.time() - _boot_)
-    await message.reply_sticker("CAACAgQAAxkBAAEGNCdlmOVoVdzYjXDhFD-RBU4NEfAmGQACLwwAAuqTAVKXwqXcqn7CKDQE")
+    await message.reply_sticker("CAACAgUAAxkBAAEMazhmhP6GNDpoQgbrCA5K_f030PbJcQACVQsAAtgv6VVVLDR2fWmCeTUE")
     await message.reply_photo(
         photo=config.START_IMG_URL,
         caption=_["start_1"].format(app.mention, get_readable_time(uptime)),
@@ -138,7 +138,7 @@ async def welcome(client, message: Message):
                     return await app.leave_chat(message.chat.id)
 
                 out = start_panel(_)
-                await message.reply_sticker("CAACAgQAAxkBAAEGNCdlmOVoVdzYjXDhFD-RBU4NEfAmGQACLwwAAuqTAVKXwqXcqn7CKDQE")
+                await message.reply_sticker("CAACAgUAAxkBAAEMazpmhP7FsQMt2B08y6keczBQ0NyFcQADCQAC-KjoVfn0Mg63lUIPNQQ")
                 await message.reply_photo(
                     photo=config.START_IMG_URL,
                     caption=_["start_3"].format(
